@@ -1,6 +1,15 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+let urlBase = "https://rickandmortyapi.com/api/character";
 
-console.log('Happy hacking :)')
+const getInfo = async() => {
+    try {
+        const response = await fetch(urlBase);
+        const data = await response.json();
+        console.log(data.results);
+    }
+    catch(error){
+        console.log(error);
+    }
+   
+}
+
+getInfo();
