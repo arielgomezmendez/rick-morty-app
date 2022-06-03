@@ -5,6 +5,9 @@ const getInfo = async() => {
         const response = await fetch(urlBase);
         const data = await response.json();
         console.log(data.results);
+        for(let i = 0; i < data.results.length; i ++){
+            console.log(data.results[i].name);
+        }
     }
     catch(error){
         console.log(error);
@@ -14,7 +17,7 @@ const getInfo = async() => {
     const container = document.getElementById("main-container");
 
     // Create nodes
-    const addNodes = () => {
+    /*const addNodes = () => {
         const card = document.createElement('article');
         const image = document.createElement('img');
         const paragraph = document.createElement('p');
@@ -22,9 +25,20 @@ const getInfo = async() => {
         container.append(card);
         card.append(image, paragraph);
     }
+    */
+
+    //Validacion
+    /*const validacion = () => {
+        if (document.getElementById("name").value === ) {
+
+        }
+    }*/
+
     
+
+
     const submitButton = document.getElementById("submit-btn");
-    submitButton.addEventListener("submit", addNodes);
+    //submitButton.addEventListener("submit", validacion);
     
 }
 
