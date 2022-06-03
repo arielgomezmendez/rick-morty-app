@@ -20,6 +20,7 @@ const getInfo = async() => {
         const paragraph = document.createElement('p');
         // Add nodes
         container.append(card);
+        card.append(image, paragraph);
     }
     
     const submitButton = document.getElementById("submit-btn");
