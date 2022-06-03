@@ -5,10 +5,19 @@ const getInfo = async() => {
         const response = await fetch(urlBase);
         const data = await response.json();
         console.log(data.results);
-        for(let i = 0; i < data.results.length; i ++){
-            console.log(data.results[i].name);
+        const input = document.getElementById("name").value;
+        //Validacion
+
+        const validacion = () => {
+            for(let i = 0; i < data.results.length; i ++){
+                console.log(data.results[i].name);
+                if(data.results[i].name === input){
+                    alert("Ahiiiii");
+                }
+            }
         }
     }
+
     catch(error){
         console.log(error);
     }
@@ -27,13 +36,8 @@ const getInfo = async() => {
     }
     */
 
-    //Validacion
-    /*const validacion = () => {
-        if (document.getElementById("name").value === ) {
-
-        }
-    }*/
-
+   
+    
     
 
 
