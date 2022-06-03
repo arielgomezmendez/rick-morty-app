@@ -9,7 +9,23 @@ const getInfo = async() => {
     catch(error){
         console.log(error);
     }
-   
+
+    //Add character information
+    const container = document.getElementById("main-container");
+
+    // Create nodes
+    const addNodes = () => {
+        const card = document.createElement('article');
+        const image = document.createElement('img');
+        const paragraph = document.createElement('p');
+        // Add nodes
+        container.append(card);
+        card.append(image, paragraph);
+    }
+    
+    const submitButton = document.getElementById("submit-btn");
+    submitButton.addEventListener("submit", addNodes);
+    
 }
 
 getInfo();
