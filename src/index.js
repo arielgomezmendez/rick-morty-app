@@ -5,17 +5,25 @@ const getInfo = async() => {
         const response = await fetch(urlBase);
         const data = await response.json();
         console.log(data.results);
-        const input = document.getElementById("name").value;
-        //Validacion
 
+        const input = document.getElementById("name");
+        const submitButton = document.getElementById("submit-btn");
+        
+        //Validacion
         const validacion = () => {
-            for(let i = 0; i < data.results.length; i ++){
-                console.log(data.results[i].name);
-                if(data.results[i].name === input){
-                    alert("Ahiiiii");
-                }
+            
+            if(data.results[i].name === input.value){
+                alert("Ahiiiii");
             }
+            else{
+                alert("Error");
+            }
+            
         }
+
+        //Events
+        submitButton.addEventListener("click", validacion);
+        
     }
 
     catch(error){
@@ -35,10 +43,6 @@ const getInfo = async() => {
         card.append(image, paragraph);
     }
     */
-
-   
-    
-    
 
 
     const submitButton = document.getElementById("submit-btn");
