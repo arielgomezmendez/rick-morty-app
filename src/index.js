@@ -13,15 +13,18 @@ const getInfo = async() => {
         const validacion = () => {
             for(let i = 0; i < data.results.length; i ++){
                 if(data.results[i].name === input.value){
-                    console.log("Es igual");
+                    // Create nodes
+                    const card = document.createElement('article');
+                    const image = document.createElement('img');
+                    const paragraph = document.createElement('p');
+                    // Add nodes
+                    container.append(card);
+                    card.append(image, paragraph);
                     
                 }
               
             }     
-        }
-            
-            
-
+        }      
         //Events
         submitButton.addEventListener("click", validacion);
         
