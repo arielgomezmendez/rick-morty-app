@@ -11,15 +11,16 @@ const getInfo = async() => {
         
         //Validacion
         const validacion = () => {
-            
-            if(data.results[i].name === input.value){
-                alert("Ahiiiii");
-            }
-            else{
-                alert("Error");
-            }
-            
+            for(let i = 0; i < data.results.length; i ++){
+                if(data.results[i].name === input.value){
+                    console.log("Es igual");
+                    
+                }
+              
+            }     
         }
+            
+            
 
         //Events
         submitButton.addEventListener("click", validacion);
