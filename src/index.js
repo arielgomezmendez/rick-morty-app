@@ -1,5 +1,5 @@
 let urlBase = "https://rickandmortyapi.com/api/character";
-
+             //https://rickandmortyapi.com/api/character/avatar/3.jpeg
 const getInfo = async() => {
     try {
         const response = await fetch(urlBase);
@@ -16,6 +16,8 @@ const getInfo = async() => {
                     // Create nodes
                     const card = document.createElement('article');
                     const image = document.createElement('img');
+                    image.src = `${urlBase}/avatar/${i}.jpeg`;
+                    //image.src = urlBase + "/avatar/" + String(i + 1) +".jpeg";
                     const paragraph = document.createElement('p');
                     // Add nodes
                     container.append(card);
