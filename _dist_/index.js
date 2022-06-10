@@ -22,8 +22,9 @@ const getInfo = async() => {
                     // Add nodes
                     container.append(card);
                     card.append(image, paragraph); 
-                    break; 
+                     
                 }
+               
             }     
         }      
         //Events
