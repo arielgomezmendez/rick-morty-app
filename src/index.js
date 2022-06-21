@@ -5,36 +5,28 @@ const getInfo = async() => {
         const response = await fetch(urlBase);
         const data = await response.json();
         console.log(data.results);
+
         const input = document.getElementById("name");
         const submitButton = document.getElementById("submit-btn");
-
-        const charactersArray = Object.entries(data.results); //return array 
-        console.log(charactersArray[0][1].name);
         
         //Validacion
         const validacion = () => {
-           
-            /*for(let i = 0; i < data.results.length; i ++){
-                if(input.value == data.results[i].name){
-                    
+            for(let i = 0; i < data.results.length; i ++){
+                if(data.results[i].name === input.value){
                     // Create nodes
                     const card = document.createElement('article');
                     const image = document.createElement('img');
-                    
+                    image.src = `${urlBase}/avatar/${i}.jpeg`;
+                    //image.src = urlBase + "/avatar/" + String(i + 1) +".jpeg";
                     const paragraph = document.createElement('p');
                     // Add nodes
                     container.append(card);
                     card.append(image, paragraph); 
-                    image.src = `${urlBase}/avatar/${i}.jpeg`;
-                    break;
                      
                 }
-                else{
-                    alert("Escriba el nombre correctamente")
-                }
                
-            }*/    
-        }     
+            }     
+        }      
         //Events
         submitButton.addEventListener("click", validacion);
         
