@@ -1,3 +1,26 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+
+#name {
+    border: 2px solid rgb(87, 88, 88);
+    border-radius: 6px;
+}
+
+#submit-btn{
+    height: 30px;
+    width: 180px;
+    border-radius: 6px;
+}
+
+.cardCharacter{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+.characterImg{
+    margin: 0 auto;
+    border-radius: 10px;
+}
